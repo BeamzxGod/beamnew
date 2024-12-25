@@ -122,7 +122,7 @@
     <header>
         <div class="heading">
             <h1 class="Welcome">Welcome to My website</h1>
-            <p class="present">this web for test</p>
+            <p class="present">this web for Beam</p>
         </div>
 
     </header>
@@ -149,10 +149,13 @@
             const username = document.getElementById("user").value.trim();
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("pass").value.trim();
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
             // ตรวจสอบข้อมูล
             if (username === "" || email === "" || password === "") {
                 alert("failed:กรุณากรอกให้ครบถ้วน");
+            } else if (!emailRegex.test(email)) {
+                alert('Failed:กรุณากรอกอีเมลที่ลงท้ายด้วย @gmail.com');
             } else {
                 alert("SuccessFully:ล็อกอินสำเร็จ!");
             }
